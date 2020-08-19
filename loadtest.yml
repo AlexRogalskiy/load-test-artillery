@@ -1,0 +1,11 @@
+config:
+  target: "http://104.42.208.191:80/healthz"
+  phases:
+    - duration: 5
+      arrivalRate: 1
+scenarios:
+  - flow:
+      - post:
+          url: "/resource"
+          json:
+            hello: "world"
