@@ -11,16 +11,14 @@ spec:
     metadata:
       labels:
         app: loadtest
-    spec:
-      nodeSelector:
-        "kubernetes.io/os": linux      
+    spec:   
       containers:
-        - image: chzbrgr71/loadtest:v2.1
+        - image: chzbrgr71/loadtest:v3.1
           name: loadtest
           env:
-            - name: load_duration
+            - name: LOAD_DURATION
               value: "-1"
-            - name: load_rate
+            - name: LOAD_RATE
               value: "2"
-            - name: load_url
-              value: http://40.89.243.3
+            - name: URL
+              value: http://52.154.63.0:3012/latest

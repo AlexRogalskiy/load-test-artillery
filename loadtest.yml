@@ -1,7 +1,7 @@
 config:
-  target: "http://104.42.208.191:80/healthz"
+  target: "http://52.154.63.0:3012/latest"
   phases:
-    - duration: 5
+    - duration: -1
       arrivalRate: 1
 scenarios:
   - flow:
